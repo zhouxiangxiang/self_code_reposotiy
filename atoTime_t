@@ -1,0 +1,9 @@
+time_t atoTime_t(const char* str, unsigned size) {
+	time_t tm = 0;
+	for (unsigned i = 0; i < size; ++i) {	
+		tm *= 10;
+		tm += (int)(*str - '0');
+		str++;
+	}
+	return tm;
+}
